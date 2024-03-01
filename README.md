@@ -7,5 +7,5 @@ Student Name: *John Joey Wright*   Student ID: *20105823*
 
 Tools, Technologies and Equipment
 
-  Camera, microcontroller(arduino), Wi-Fi, TMP36, LCD screen, LDR, programming, webappdevolpment.
+  Camera, microcontroller(arduino), raspberry pi, Wi-Fi, TMP36, LCD screen, LDR, programming, webappdevolpment.
 
