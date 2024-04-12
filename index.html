@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Stream</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .bubble-container {
+    position: relative;
+    width: 400px; /* Adjust width as needed */
+    height: 400px; /* Adjust height as needed */
+    border-radius: 50%;
+    background-color: #fff; /* Inside of the bubble */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+    border: 10px solid #add8e6; /* Light blue border */
+  }
+  
+  .video-stream {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  video {
+    width: 100%;z
+    height: 100%;
+    object-fit: cover;
+  }
+</style>
+</head>
+<body>
+  <div class="bubble-container">
+    <div>
+   <iframe>https://lizard-pro-mallard.ngrok-free.app</iframe>
+    </div>
+  </div>
+</body>
+</html>
