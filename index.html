@@ -3,51 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Video Stream</title>
+<title>RoomMonitor</title>
 <style>
   body {
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+  .container {
+    text-align: center;
   }
-  
-  .bubble-container {
-    position: relative;
-    width: 400px; /* Adjust width as needed */
-    height: 400px; /* Adjust height as needed */
-    border-radius: 50%;
-    background-color: #fff; /* Inside of the bubble */
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
-    border: 10px solid #add8e6; /* Light blue border */
+  h1 {
+    color: #007bff; 
   }
-  
-  .video-stream {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    overflow: hidden;
-  }
-  
-  video {
-    width: 100%;z
-    height: 100%;
-    object-fit: cover;
+  iframe {
+    width: 640px;
+    height: 480px;
+    border: 30px solid #007bff; 
+    border-radius: 12px; 
   }
 </style>
 </head>
-<body>
-  <div class="bubble-container">
-    <div>
-   <iframe>https://lizard-pro-mallard.ngrok-free.app</iframe>
-    </div>
-  </div>
+<body  style="background-color: greenyellow;">
+<div class="container">
+  <h1>Room Monitor Security Camera</h1>
+  <p>IoT project semester 2</p>
+  <iframe src="http://192.168.1.148:5000/video_feed"></iframe>
+</div>
 </body>
 </html>

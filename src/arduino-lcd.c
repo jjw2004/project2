@@ -7,7 +7,7 @@ const int rs = 12, en = 11, d4 = 2, d5 = 3, d6 = 4, d7 = 5;
 //LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 const int pResistorPin = A0; // Photoresistor at Arduino analog pin A0
 const int ledPin = 9; 
-const int threshold = 300;  //
+const int threshold = 300;  //Threshold for the photoresitor to compare to
 int seconds = 0;
 int value;          // Store value from photoresistor (0-1023)
 
@@ -18,7 +18,7 @@ void setup() {
   pinMode(ledPin, OUTPUT);  // Set ledPin - 9 pin as an output
   analogWrite(A3, Contrast);
   //lcd.begin(16, 2);
-  pinMode(pResistorPin, INPUT);// Set pResistor - A0 pin as an input (optional)
+  pinMode(pResistorPin, INPUT);// Set pResistor - A0 pin as an input
   Serial.begin(9600);
   setDebugMessageLevel(2);
   ArduinoCloud.printDebugInfo();

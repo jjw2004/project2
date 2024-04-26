@@ -25,5 +25,13 @@ Tools, Technologies and Equipment
   
 
   Step 2:
-  Learn to take photos at certain time stamp and where to upload photos to web service (e.g. Google Photos/Cloud or similar)
+ https://www.youtube.com/watch?v=qs3KhLDUBmk&list=LL
+ Learn to make a local "security camera", this will be able to connect to devices that are on the local network using http.
+
+  Step 3:
+  https://www.youtube.com/watch?v=p4L3g9Grl3k
+  Learn to make a https "security camera" where your pi makes a web host using ngroks, they provide a free domain.
+
+  once this has been achieved you can make a cool webpage for your pi camera to be loaded onto.
+  
 

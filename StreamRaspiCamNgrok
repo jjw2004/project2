@@ -1,0 +1,39 @@
+# Import necessary modules
+import io  # For handling streams
+import picamera  # Interface with Raspberry Pi camera module
+from flask import Flask, Response  # Flask for web server
+
+# Initialize Flask app
+app = Flask(__name__)
+
+# Define a function to generate frames from PiCamera
+def generate_frames():
+    # Initialize PiCamera
+    with picamera.PiCamera() as camera:
+        # Set camera resolution
+        camera.resolution = (640, 480)
+        # Set camera framerate
+        camera.framerate = 24
+        # Create a stream to hold image data in memory
+        stream = io.BytesIO()
+
+        # Capture frames continuously
+        for _ in camera.capture_continuous(stream, 'jpeg', use_video_port=True):
+            # Reset stream position to beginning
+            stream.seek(0)
+            # Yield the frame with appropriate MIME type and formatting
+            yield b'--frame\r\nContent-Type: image/jpeg\r\n\r\n' + stream.read() + b'\r\n'
+            # Reset stream position and truncate to clear previous frame data
+            stream.seek(0)
+            stream.truncate()
+
+# Define route for serving video feed
+@app.route('/')
+def video_feed():
+    # Return a response containing the generated frames with proper MIME type and formatting
+    return Response(generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
+
+# Run the Flask app
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000, threaded=True)
+#you will need to go to the ngrok site and run commands in the terminal to add your auth key and to host the web server.
