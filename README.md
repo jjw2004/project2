@@ -1,37 +1,42 @@
-# project2
-Project Name: Room Monitor
+# Project Name: Room Monitor
 
-Student Name: *John Joey Wright*   Student ID: *20105823*
+**Student Name:** John Joey Wright   **Student ID:** 20105823
 
-  My IoT idea is a room monitor which will allow the user to monitor a room in your house. it will be able to measure the temperature of the room, when the lights turn on/off and a camera facing outside the window to see what nature has to offer. The camera feed will be displayed on a website and the monitors (light, temp) will be emailed to you at 10:00pm every night giving you the average temperature throughout the day and how many times the lights were turned on. The monitors will be connected to a LCD Screen which will display the time and the current room temperature.
+## Project Description
+My IoT idea is a room monitor which will allow the user to monitor a room in your house. It will be able to measure the temperature of the room, detect when the lights turn on/off, and provide a camera feed facing outside the window to observe nature. The camera feed will be displayed on a website, and the monitored data (light status, temperature) will be emailed to the user at 10:00 PM every night, providing the average temperature throughout the day and the frequency of light switches. The monitors will be connected to an LCD screen which will display the time and the current room temperature.
 
-Tools, Technologies and Equipment
+## Tools, Technologies, and Equipment
+- Camera
+- Microcontroller (Arduino)
+- Raspberry Pi
+- Wi-Fi
+- TMP36 temperature sensor
+- LCD screen
+- Light Dependent Resistor (LDR)
+- Programming
+- Web application development
 
-  Camera, microcontroller(arduino), raspberry pi, Wi-Fi, TMP36, LCD screen, LDR, programming, webappdevolpment.
+## Raspberry Pi Steps:
+### Step 1:
+- Learn how to get a Raspberry Pi and camera working.
+  - [Getting Started with Raspberry Pi](https://www.raspberrypi.com/documentation/computers/getting-started.html)
+  - [Raspberry Pi Camera Documentation](https://www.raspberrypi.com/documentation/accessories/camera.html#:~:text=an%20earthing%20strap.-,Connecting%20the%20Camera,contacts%20facing%20the%20HDMI%20port)
+  - [Video Tutorial](https://www.youtube.com/watch?v=yhM1NhD-kGs) demonstrating the setup process.
 
+- Download the Raspberry Pi Imager tool to set up your Raspberry Pi, including Wi-Fi settings configuration. Use an SD card in your PC and follow the pop-up menus.
 
-  Step 1:
-  Learn how to get a Raspberry Pi and camera working.
-  https://www.raspberrypi.com/documentation/computers/getting-started.html
-  https://www.raspberrypi.com/documentation/accessories/camera.html#:~:text=an%20earthing%20strap.-,Connecting%20the%20Camera,contacts%20facing%20the%20HDMI%20port.
-  https://www.youtube.com/watch?v=yhM1NhD-kGs
-  This video shows step by step process of how to set up a camera on a Raspberry Pi.
+- Plug the camera into the Pi, ensuring the correct orientation. After updating the BIOS, use the command `raspistill -o ./Pictures/test.jpg` to test if the camera is working.
 
-  download the Raspberry Pi imager tool, this helps you set up your Raspberry Pi, including setting up Wi-Fi settings. Just use an SD card in your PC and then follow the pop-up menus.
+### Step 2:
+- Learn to make a local "security camera" that can connect to devices on the local network using HTTP.
+  - [Video Tutorial](https://www.youtube.com/watch?v=qs3KhLDUBmk&list=LL)
 
-  Plug the Camera into the Pi make sure the blue tab is facing towards the black tab, after updating the BIOs you can use your Pi camera. To test if it is working use the command "raspistill -o ./Pictures/test.jpg" this saves a photo taken on the Pi to the directory Pictures and the name of the file is test.jpg. the -o means output and there are lots of other commands you can get by just typing "raspistill".
-  
+### Step 3:
+- Learn to make an HTTPS "security camera" where your Pi serves as a web host using ngrok, which provides a free domain.
+  - [Video Tutorial](https://www.youtube.com/watch?v=p4L3g9Grl3k)
 
-  
+- Once this has been achieved, you can create a webpage for your Pi camera.
 
-  Step 2:
- https://www.youtube.com/watch?v=qs3KhLDUBmk&list=LL
- Learn to make a local "security camera", this will be able to connect to devices that are on the local network using http.
-
-  Step 3:
-  https://www.youtube.com/watch?v=p4L3g9Grl3k
-  Learn to make a https "security camera" where your pi makes a web host using ngroks, they provide a free domain.
-
-  once this has been achieved you can make a cool webpage for your pi camera to be loaded onto.
-  
+## Arduino:
+The Arduino setup is a combination of the labs that were conducted throughout the semester, incorporating components such as the TMP36 temperature sensor, LCD screen, and LDR for light detection.
 
